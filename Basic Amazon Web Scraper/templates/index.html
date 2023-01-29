@@ -1,0 +1,21 @@
+
+
+
+{% block head %}
+
+<title>Amazon Scraper</title>
+
+
+{% endblock %}
+
+{% block body %}
+<center style="margin-top:10em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png" width = 25%>
+<form action="/scrap" method="POST">
+
+  <input type="search" id="gsearch" name="search-input" style = "margin-top:2em; width = 50%">
+  <input type="submit" id="search-btn">
+</form>
+</center>
+
+{% endblock %}

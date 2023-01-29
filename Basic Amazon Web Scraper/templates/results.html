@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scraped Data</title>
+
+<style>
+
+body{
+    margin: 0;
+    margin-top: -20px;
+}
+
+td,th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+
+table{
+max-width: 100% !important;
+table-layout: fixed;
+}
+
+
+
+</style>
+</head>
+
+
+
+<body>
+
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+</body>
+</html>
